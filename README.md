@@ -91,7 +91,7 @@ For **-N4** module (4MB Flash/no PSRAM) the following settings apply:
 ### PlatformIO:
 Building with **PlatformIO** is easy as well. Starting with Arduino ESP32 Core v4.0.0 the VSCode/PlatformIO IDE provides the necessary board definition file. Such *.json files provide the correct board definitions & settings.  
 
-Just create a new project and give it a name, then go to board selection, enter "yb-" and choose the YB-ESP32-S3-RS485 board from the list thats popping up.
+Just create a new project and give it a name, then go to board selection, enter "yb-" and choose the YB-ESP32-S3-RS485 board from the list.
 
  ![](https://github.com/yellobyte/YB-ESP32-S3-RS485/raw/main/doc/YB-ESP32-S3-RS485_PlatformIO_board_selection.jpg)
 
