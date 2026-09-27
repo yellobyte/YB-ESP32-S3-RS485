@@ -54,7 +54,7 @@ The board uses a LDO to drop the external supply voltage (5VDC) and internally o
   - through the USB-C port
   - 5VDC applied to the 5V pin
 
-Normal operating current of the idle board (-N8R2, all GPIOs unconnected, RS-485 bus not connected, WiFi disabled) is about 90mA. With RS-485 bus and WiFi active the board draws about 150...160mA (mainly depending on WiFi link).
+Normal operating current of the idle board (-N8R2, all GPIOs/RS-485 bus unconnected, WiFi disabled) is about 90mA. With RS-485 bus and WiFi active the board draws about 150...160mA (mainly depending on WiFi link).
 
 ## Application hints:
 The board uses the popular WCH chips CH334P (USB-Hub) and CH343P (USB-UART bridge). If you haven't done yet then you need to install the CH343 Driver on your Laptop/PC. For Windows go [here](https://www.wch-ic.com/search?t=all&q=ch343) and download and install the newest version of the driver. Linux provides CH34x drivers by default. 
