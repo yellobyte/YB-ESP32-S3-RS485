@@ -1,0 +1,47 @@
+--- Terminal on COM6 | 115200 8-N-1
+--- Available filters and text transformations: debug, default, direct, esp32_exception_decoder, hexlify, log2file, nocontrol, printable, send_on_enter, time
+--- More details at https://bit.ly/pio-monitor-filters
+--- Quit: Ctrl+C | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H
+18:32:10.302 > ESP-ROM:esp32s3-20210327
+18:32:10.302 > Build:Mar 27 2021
+18:32:10.302 > rst:0x1 (POWERON),boot:0x8 (SPI_FAST_FLASH_BOOT)
+18:32:10.302 > SPIWP:0xee
+18:32:10.302 > mode:DIO, clock div:1
+18:32:10.302 > load:0x3fce2820,len:0x10cc
+18:32:10.302 > load:0x403c8700,len:0xc2c
+18:32:10.302 > load:0x403cb700,len:0x30b0
+18:32:10.302 > entry 0x403c88b8
+18:32:10.373 > running example "Reading PT100 Modbus RTU Temperature Sensor":
+18:32:10.395 > Temp: 25.1 °C
+18:32:11.422 > Temp: 25.1 °C
+18:32:12.449 > Temp: 25.1 °C
+18:32:13.476 > Temp: 25.1 °C
+18:32:14.503 > Temp: 25.0 °C
+18:32:15.529 > Temp: 25.0 °C
+18:32:16.556 > Temp: 25.0 °C
+18:32:17.583 > Temp: 24.9 °C
+18:32:18.609 > Temp: 24.9 °C
+18:32:19.635 > Temp: 24.9 °C
+18:32:20.662 > Temp: 24.9 °C
+18:32:21.689 > Temp: 24.9 °C
+18:32:22.715 > Temp: 24.8 °C
+18:32:23.742 > Temp: 24.8 °C
+18:32:24.769 > Temp: 24.8 °C
+18:32:25.797 > Temp: 24.8 °C
+18:32:26.824 > Temp: 24.8 °C
+18:32:27.850 > Temp: 24.7 °C
+18:32:28.877 > Temp: 24.7 °C
+18:32:29.904 > Temp: 24.7 °C
+18:32:30.931 > Temp: 24.7 °C
+18:32:31.958 > Temp: 24.7 °C
+18:32:32.985 > Temp: 24.7 °C
+18:32:34.011 > Temp: 24.7 °C
+18:32:35.038 > Temp: 24.7 °C
+18:32:36.065 > Temp: 24.7 °C
+18:32:37.090 > Temp: 24.7 °C
+18:32:38.117 > Temp: 24.7 °C
+18:32:39.143 > Temp: 24.7 °C
+18:32:40.170 > Temp: 24.6 °C
+18:32:41.197 > Temp: 24.6 °C
+18:32:42.224 > Temp: 24.6 °C
+18:32:43.251 > Temp: 24.6 °C

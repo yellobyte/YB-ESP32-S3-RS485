@@ -1,0 +1,43 @@
+--- Terminal on COM6 | 115200 8-N-1
+--- Available filters and text transformations: debug, default, direct, esp32_exception_decoder, hexlify, log2file, nocontrol, printable, send_on_enter, time
+--- More details at https://bit.ly/pio-monitor-filters
+--- Quit: Ctrl+C | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H
+18:44:44.281 > ESP-ROM:esp32s3-20210327
+18:44:44.289 > Build:Mar 27 2021
+18:44:44.289 > rst:0x1 (POWERON),boot:0x8 (SPI_FAST_FLASH_BOOT)
+18:44:44.295 > SPIWP:0xee
+18:44:44.295 > mode:DIO, clock div:1
+18:44:44.295 > load:0x3fce2820,len:0x10cc
+18:44:44.300 > load:0x403c8700,len:0xc2c
+18:44:44.300 > load:0x403cb700,len:0x30b0
+18:44:44.300 > entry 0x403c88b8
+18:44:44.377 > running example "Reading DDS661 Modbus RTU Power Meter":
+18:44:44.377 > Voltage: raw data: 0x436a 0x3333 --> value: 234.20 V
+18:44:44.504 > Current: raw data: 0x3d07 0x2b02 --> value: 0.03 A
+18:44:44.644 > Frequency: raw data: 0x4248 0x0000 --> value: 50.00 Hz
+18:44:44.785 > Power factor: raw data: 0x3f80 0x0000 --> value: 1.00 cos φ
+18:44:44.950 > Power: raw data: 0x0000 0x0000 --> value: 0.00 W
+18:44:45.080 > Energy: raw data: 0x3cf5 0xc28f --> value: 0.03 kWh
+18:44:45.167 > 
+18:44:50.164 > Voltage: raw data: 0x436a 0x3333 --> value: 234.20 V
+18:44:50.300 > Current: raw data: 0x3d07 0x2b02 --> value: 0.03 A
+18:44:50.440 > Frequency: raw data: 0x4248 0x0000 --> value: 50.00 Hz
+18:44:50.580 > Power factor: raw data: 0x3f80 0x0000 --> value: 1.00 cos φ
+18:44:50.746 > Power: raw data: 0x0000 0x0000 --> value: 0.00 W
+18:44:50.876 > Energy: raw data: 0x3cf5 0xc28f --> value: 0.03 kWh
+18:44:50.963 > 
+18:44:55.959 > Voltage: raw data: 0x436a 0x0000 --> value: 234.00 V
+18:44:56.096 > Current: raw data: 0x3d07 0x2b02 --> value: 0.03 A
+18:44:56.236 > Frequency: raw data: 0x4248 0x0000 --> value: 50.00 Hz
+18:44:56.377 > Power factor: raw data: 0x3f80 0x0000 --> value: 1.00 cos φ
+18:44:56.542 > Power: raw data: 0x0000 0x0000 --> value: 0.00 W
+18:44:56.672 > Energy: raw data: 0x3cf5 0xc28f --> value: 0.03 kWh
+18:44:56.759 > 
+18:45:01.755 > Voltage: raw data: 0x436a 0x4ccd --> value: 234.30 V
+18:45:01.892 > Current: raw data: 0x3d07 0x2b02 --> value: 0.03 A
+18:45:02.032 > Frequency: raw data: 0x4248 0x0000 --> value: 50.00 Hz
+18:45:02.173 > Power factor: raw data: 0x3f80 0x0000 --> value: 1.00 cos φ
+18:45:02.338 > Power: raw data: 0x0000 0x0000 --> value: 0.00 W
+18:45:02.468 > Energy: raw data: 0x3cf5 0xc28f --> value: 0.03 kWh
+18:45:02.555 > 
+...
