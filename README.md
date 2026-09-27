@@ -1,5 +1,5 @@
 ## YB-ESP32-S3-RS485 Development Board Overview:
-The **YB-ESP32-S3-RS485** is a general purpose development board supporting **Modbus-RTU** and therefore **Home Automation** projects. It is based on Espressif's ESP32-S3 MCU and presently comes in different variants:  
+The **YB-ESP32-S3-RS485** is a general purpose development board supporting **Modbus-RTU** and **Home Automation** projects. It is based on Espressif's ESP32-S3 MCU and presently comes in different variants:  
 - with **ESP32-S3-WROOM-1-N8R2 module** (8MB Flash/2MB PSRAM) or
 - with **ESP32-S3-WROOM-1-N16R2 module** (16MB Flash/2MB PSRAM)  
 
