@@ -83,7 +83,7 @@ Just create a new project and give it a name, then go to board selection, enter 
 
  ![](https://github.com/yellobyte/YB-ESP32-S3-RS485/raw/main/doc/YB-ESP32-S3-RS485_PlatformIO_board_selection.jpg)
 
-**Important:**
+**Important:**  
 If the WROOM module features **16MB** flash memory, add the following lines to the *platformio.ini* project file's respective **[env]** section to account for the 16MB flash available. Otherwise you are restricted to 8MB (as set in the *.json board file).
 ```
 ...
