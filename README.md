@@ -1,7 +1,7 @@
 ## YB-ESP32-S3-RS485 Development Board Overview:
-The **YB-ESP32-S3-RS485** is a general purpose development board based on Espressif's ESP32-S3 MCU. It presently comes in different variants:  
-- with **ESP32-S3-WROOM-1U-N8R2 module** (8MB Flash/2MB PSRAM) and
-- without **ESP32-S3-WROOM-1(U) module** which allows you to solder on any ESP32-S3-WROOM module of your choice.  
+The **YB-ESP32-S3-RS485** is a general purpose development board supporting **Modbus-RTU** and therefore **Home Automation** projects. It is based on Espressif's ESP32-S3 MCU and presently comes in different variants:  
+- with **ESP32-S3-WROOM-1-N8R2 module** (8MB Flash/2MB PSRAM) or
+- with **ESP32-S3-WROOM-1-N16R2 module** (16MB Flash/2MB PSRAM)  
 
 The 4-layer board provides a **galvanically isolated RS-485 transceiver**, **CH334 USB-Hub** chip, **CH343 USB-UART** bridge chip, four **status LEDs** and a **USB-C connector** for software upload, serial output, JTAG debugging and feeding power to the board. The boards are currently available on sales platforms [eBay](https://www.ebay.de/sch/i.html?_nkw=yb-esp32-s3) and [Ricardo.ch](https://www.ricardo.ch/en/s/YB-ESP32-S3). 
 
@@ -25,7 +25,7 @@ That's it. The status LED 'IO47' will blink fast when power is applied and will 
 Carrying on you could build and upload one of the many provided ArduinoIDE/PlatformIO [examples](https://github.com/yellobyte/YB-ESP32-S3-RS485/tree/main/examples) and build a webserver, sniff your home LAN and much more.
 
 ## YB-ESP32-S3-RS485 board features:
- - **ESP32-S3-WROOM-1-N8R2** module (8MB Flash, 2MB PSRAM) when populated with WROOM module
+ - **ESP32-S3-WROOM-1-NxR2** module (8 or 16MB Flash, 2MB PSRAM)
  - **WiFi PCB antenna** (on ESP32-S3-WROOM-1 module)
  - **galvanically isolated RS-485 transceiver** chip CA-IS2092A
  - the **CA-IS2092A** pins required to control the chip are hardwired to the ESP32-S3 GPIOs as follows:
@@ -50,7 +50,7 @@ Just for information purposes: The ESP32-S3-WROOM-1 module family comprises seve
 The boards **outline**, **block diagram** and **schematic** files are all located in folder [doc](https://github.com/yellobyte/YB-ESP32-S3-RS485/tree/main/doc), together with some data sheets for Espressif's MCU ESP32-S3 and the ESP32-S3-WROOM-1 modules.
 
 ## Powering the board:
-The board uses a LDO to drop the external supply voltage (5VDC min.) and internally operates on 3.3Volt. There are two different ways to provide power to the board.
+The board uses a LDO to drop the external supply voltage (5VDC) and internally operates on 3.3Volt. There are two different ways to provide power to the board:
   - through the USB-C port
   - 5VDC applied to the 5V pin
 
@@ -96,23 +96,19 @@ Just create a new project and give it a name, then go to board selection, enter 
  ![](https://github.com/yellobyte/YB-ESP32-S3-RS485/raw/main/doc/YB-ESP32-S3-RS485_PlatformIO_board_selection.jpg)
 
 **Important:**  
-1.) If the WROOM module features **8MB** or **16MB** **Flash** memory then you need to add the following lines to the *platformio.ini* project file's **[env]** section to account for the 8MB resp. 16MB flash available. Otherwise you are restricted to only 4MB (as set in the standard *.json board file).  
-
-For module with 8MB Flash (or more):  
+1.) If the WROOM module features **16MB** flash memory, add the following lines to the *platformio.ini* project file's respective **[env]** section to account for the 16MB flash available. Otherwise you are restricted to 8MB (as set in the *.json board file).  
 ```
-board_build.partitions = default_8MB.csv
-board_upload.flash_size = 8MB
-board_upload.maximum_size = 8388608
-```
-For module with 16MB Flash (or more):  
-```
+...
 board_build.partitions = default_16MB.csv
 board_upload.flash_size = 16MB
 board_upload.maximum_size = 16777216
+...
 ```
-2.) If the WROOM module features **>= 8MB** **PSRAM** then it needs below line for the program to run properly:
+2.) If the WROOM module features **>= 8MB** PSRAM then it needs below line to prevent the core from crashing:
 ```
+...
 board_build.arduino.memory_type = qio_opi
+...
 ```
 
 ### Using the USB-C port:
