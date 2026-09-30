@@ -42,8 +42,6 @@ The board will spare you the trouble of cabling two different Arduino boards and
 
  ![](https://github.com/yellobyte/YB-ESP32-S3-RS485/raw/main/doc/YB-ESP32-S3-RS485_modules_replacement.jpg)
 
-Just for information purposes: The ESP32-S3-WROOM-1 module family comprises several [**versions**](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/ESP32_specs_and_manuals/ESP32-S3-WROOM-1(U)_Variants.jpg). The **-1** versions come with embedded PCB antenna. The extension -Nx(Ry) defines the amount of available FLASH/PSRAM, e.g. -N4 (4MB Flash, no PSRAM), -N8 (8MB Flash, no PSRAM), -N8R2 (8 MB Flash, 2MB PSRAM), -N16R8 (16 MB Flash, 8MB PSRAM) etc.
-
 ## Board Pin Layout:
  ![](https://github.com/yellobyte/YB-ESP32-S3-RS485/raw/main/doc/YB-ESP32-S3-RS485_pinlayout.jpg)
 
@@ -177,3 +175,12 @@ It takes a few seconds and then MicroPython should present a list of found WiFi 
 
 For more detailed info about MicroPython running on ESP32 please have a look here:
 https://docs.micropython.org/en/latest/esp32/quickref.html
+
+## General notes:
+
+1) The ESP32-S3-WROOM-1 module family comprises several [**versions**](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/ESP32_specs_and_manuals/ESP32-S3-WROOM-1(U)_Variants.jpg). The **-1** versions come with embedded PCB antenna, the **-1U** versions with IPEX antenna socket instead. The extension -Nx(Ry) defines the amount of integrated FLASH/PSRAM, e.g. -N4 (4MB Flash, no PSRAM), -N4R2 (4 MB Flash, 2MB PSRAM), -N8R2 (8 MB Flash, 2MB PSRAM) etc.  
+
+2) The ESP32-S3 includes four SPI controllers: SPI0, SPI1, SPI2(Fast SPI) and SPI3. SPI0/1 are reserved for Flash and PSRAM (if available) and should be left alone!
+The remaining two are available for the public. In the ESP32-S3's Arduino universe SPI2 & SPI3 are named FSPI & HSPI. FSPI by default is assigned to GPIOs 10-15 and routed via IO MUX. However, both can get pinned to any available GPIO pin if needed but FSPI will be slower if routed through GPIO Matrix
+
+3) The board supports USB Serial JTAG debugging via ESP32-S3 integrated JTAG circuitry. Look [**here**](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/debugging).
