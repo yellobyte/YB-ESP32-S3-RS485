@@ -1,0 +1,54 @@
+--- Terminal on COM6 | 115200 8-N-1
+--- Available filters and text transformations: debug, default, direct, esp32_exception_decoder, hexlify, log2file, nocontrol, printable, send_on_enter, time
+--- More details at https://bit.ly/pio-monitor-filters
+--- Quit: Ctrl+C | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H
+00:57:57.958 > ESP-ROM:esp32s3-20210327
+00:57:57.958 > Build:Mar 27 2021
+00:57:57.958 > rst:0x1 (POWERON),boot:0x8 (SPI_FAST_FLASH_BOOT)
+00:57:57.958 > SPIWP:0xee
+00:57:57.958 > mode:DIO, clock div:1
+00:57:57.958 > load:0x3fce2820,len:0x10cc
+00:57:57.958 > load:0x403c8700,len:0xc2c
+00:57:57.958 > load:0x403cb700,len:0x30b0
+00:57:57.958 > entry 0x403c88b8
+00:57:58.029 > running example "Reading SHT20 Modbus RTU Temperature/Humidity Sensor":
+00:57:58.075 > Temp: 25.5 °C, Humidity: 52.8 
+00:58:00.183 > Temp: 25.5 °C, Humidity: 52.8 
+00:58:02.291 > Temp: 25.5 °C, Humidity: 52.8 
+00:58:04.400 > Temp: 25.5 °C, Humidity: 52.7 
+00:58:06.508 > Temp: 25.5 °C, Humidity: 52.7 
+00:58:08.617 > Temp: 25.5 °C, Humidity: 52.6 
+00:58:10.725 > Temp: 26.2 °C, Humidity: 53.3 
+00:58:12.832 > Temp: 28.4 °C, Humidity: 70.8 
+00:58:14.940 > Temp: 26.9 °C, Humidity: 81.8 
+00:58:17.048 > Temp: 26.7 °C, Humidity: 88.0 
+00:58:19.156 > Temp: 26.3 °C, Humidity: 91.5 
+00:58:21.264 > Temp: 26.1 °C, Humidity: 92.4 
+00:58:23.372 > Temp: 26.1 °C, Humidity: 89.7 
+00:58:25.480 > Temp: 26.0 °C, Humidity: 89.0 
+00:58:27.588 > Temp: 26.0 °C, Humidity: 87.6 
+00:58:29.696 > Temp: 25.9 °C, Humidity: 84.5 
+00:58:31.804 > Temp: 25.9 °C, Humidity: 80.0 
+00:58:33.912 > Temp: 25.9 °C, Humidity: 78.5 
+00:58:36.020 > Temp: 25.8 °C, Humidity: 76.8 
+00:58:38.128 > Temp: 25.8 °C, Humidity: 74.0 
+00:58:40.237 > Temp: 25.8 °C, Humidity: 71.9 
+00:58:42.346 > Temp: 25.8 °C, Humidity: 69.5 
+00:58:44.454 > Temp: 25.8 °C, Humidity: 67.4 
+00:58:46.563 > Temp: 25.8 °C, Humidity: 66.3 
+00:58:48.671 > Temp: 25.8 °C, Humidity: 65.5 
+00:58:50.780 > Temp: 25.8 °C, Humidity: 64.1 
+00:58:52.889 > Temp: 25.8 °C, Humidity: 62.8 
+00:58:54.998 > Temp: 25.8 °C, Humidity: 62.5 
+00:58:57.106 > Temp: 25.8 °C, Humidity: 62.2 
+00:58:59.215 > Temp: 25.8 °C, Humidity: 61.7 
+00:59:01.323 > Temp: 25.7 °C, Humidity: 61.1 
+00:59:03.431 > Temp: 25.7 °C, Humidity: 60.7 
+00:59:05.540 > Temp: 25.7 °C, Humidity: 60.0 
+00:59:07.648 > Temp: 25.7 °C, Humidity: 59.4 
+00:59:09.757 > Temp: 25.7 °C, Humidity: 58.7 
+00:59:11.865 > Temp: 25.7 °C, Humidity: 58.5 
+00:59:13.974 > Temp: 25.7 °C, Humidity: 58.2 
+00:59:16.082 > Temp: 25.7 °C, Humidity: 57.9 
+00:59:18.190 > Temp: 25.7 °C, Humidity: 57.7 
+00:59:20.299 > Temp: 25.7 °C, Humidity: 57.4 
