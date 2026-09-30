@@ -7,8 +7,7 @@
 
   'Serial' is used for serial/debug output, 'Serial1' for RS-485 communication.
 
-  The SHT20 temperature sensor by default communicates with 9600Bd, 8 data bits, 
-  no parity and 1 stop bit.
+  The SHT20 sensor by default communicates with 9600Bd, 8 data bits, no parity and 1 stop bit.
 
   Last updated 2026-09-30, ThJ <yellobyte@bluewin.ch>
 */
