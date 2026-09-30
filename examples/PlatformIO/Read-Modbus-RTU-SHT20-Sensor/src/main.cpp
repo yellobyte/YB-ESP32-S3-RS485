@@ -45,12 +45,11 @@ void setup() {
 
 void loop() {
   uint8_t result=0;
-  uint16_t data[16];
 
   result = sht20.readInputRegisters(1, 2);               // function code 0x04
 
   if (result == sht20.ku8MBSuccess) {
-    Serial.printf("Temp: %.1f °C, Humidity: %.1f %\n", 
+    Serial.printf("Temp: %.1f °C, Humidity: %.1f %%\n", 
                   (float)(sht20.getResponseBuffer(0) / 10.0), 
                   (float)(sht20.getResponseBuffer(1) / 10.0));
   }
