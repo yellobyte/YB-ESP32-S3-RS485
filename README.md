@@ -9,7 +9,7 @@ The 4-layer board provides a **galvanically isolated RS-485 transceiver**, **CH3
 
 The **galvanic isolation** of the RS-485 bus from the rest of the board provides extra security, stability and improves reliability. The board can be used in applications when the need for galvanically isolated interfaces in 'noisy' environments is critical.
 
-The built-in **RS-485 bus termination** (120Ω) if needed can be disabled by opening the 2 labeled solder bridges 'BUS-TERM.' on the bottom of the board.
+The built-in **RS-485 bus termination** (120Ω) if needed can be disabled by opening the 2 labeled solder bridges 'BUS-TERM' on the bottom of the board.
 
 Arduino libraries for RS-485/Modbus-RTU are widely available (e.g. [**ModbusMaster**](https://github.com/4-20ma/ModbusMaster)), enabling you to easily realize ESP32 projects around this board with **Modbus-RTU/Home Automation** support.
 
