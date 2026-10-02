@@ -1,13 +1,14 @@
 /*
   Reading a SHT20 Modbus RTU Temperature & Humidity Sensor
 
-  This sketch shows you how to interact with a SHT20 Modbus RTU temperature & humidity 
-	sensor. It reads the temperature & humidity values every 2 seconds and outputs them 
-	to the serial monitor.
+  This sketch shows you how to interact with a SHT20 Modbus RTU temperature & humidity
+  sensor module. It reads the temperature & humidity values every 2 seconds and outputs
+  them to the serial monitor.
 
   'Serial' is used for serial/debug output, 'Serial1' for RS-485 communication.
 
-  The SHT20 sensor by default communicates with 9600Bd, 8 data bits, no parity and 1 stop bit.
+  The SHT20 sensor module by default communicates with 9600Bd, 8 data bits, no parity
+  and 1 stop bit.
 
   Last updated 2026-09-30, ThJ <yellobyte@bluewin.ch>
 */
@@ -32,12 +33,12 @@ void setup() {
   Serial.begin(115200);                                  // serial output
   Serial1.begin(9600, SERIAL_8N1, RS485_RXD, RS485_TXD); // RS-485 communication
 
-  Serial.println("running example \"Reading SHT20 Modbus RTU Temperature/Humidity Sensor\":");	
+  Serial.println("running example \"Reading SHT20 Modbus RTU Temperature/Humidity Sensor\":");
 
   sht20.begin(1, Serial1);                               // slave ID=1, comm via Serial1
-#ifdef TX_ENABLE_GPIO21	
+#ifdef TX_ENABLE_GPIO21
   pinMode(RS485_TX_ENABLE, OUTPUT);
-  digitalWrite(RS485_TX_ENABLE, LOW);	
+  digitalWrite(RS485_TX_ENABLE, LOW);
   sht20.preTransmission(preTransmission);
   sht20.postTransmission(postTransmission);
 #endif
@@ -49,8 +50,8 @@ void loop() {
   result = sht20.readInputRegisters(1, 2);               // function code 0x04
 
   if (result == sht20.ku8MBSuccess) {
-    Serial.printf("Temp: %.1f °C, Humidity: %.1f %%\n", 
-                  (float)(sht20.getResponseBuffer(0) / 10.0), 
+    Serial.printf("Temp: %.1f °C, Humidity: %.1f %%\n",
+                  (float)(sht20.getResponseBuffer(0) / 10.0),
                   (float)(sht20.getResponseBuffer(1) / 10.0));
   }
   else {

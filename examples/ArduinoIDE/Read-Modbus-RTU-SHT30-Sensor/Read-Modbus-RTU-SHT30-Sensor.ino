@@ -2,12 +2,13 @@
   Reading a SHT30 Modbus RTU Temperature & Humidity Sensor
 
   This sketch shows you how to interact with a SHT30 Modbus RTU temperature & humidity
-  sensor. It reads the temperature & humidity values every 2 seconds and outputs them
-  to the serial monitor.
+  sensor module. It reads the temperature & humidity values every 2 seconds and outputs
+  them to the serial monitor.
 
   'Serial' is used for serial/debug output, 'Serial1' for RS-485 communication.
 
-  The SHT30 sensor by default communicates with 9600Bd, 8 data bits, no parity and 1 stop bit.
+  The SHT30 sensor module by default communicates with 9600Bd, 8 data bits, no parity
+  and 1 stop bit.
 
   Last updated 2026-09-30, ThJ <yellobyte@bluewin.ch>
 */
