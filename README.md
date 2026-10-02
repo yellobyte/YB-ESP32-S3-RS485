@@ -7,11 +7,13 @@ The 4-layer board provides a **galvanically isolated RS-485 transceiver**, **CH3
 
 ![](https://github.com/yellobyte/YB-ESP32-S3-RS485/raw/main/doc/YB-ESP32-S3-RS485_board_top.jpg)
 
+The galvanic isolation of the RS-485 bus from the rest of the board provides extra security and improves reliability. The board can be used in applications when the need for galvanically isolated interfaces in 'noisy' environments is critical.
+
+Arduino libraries for RS-485/Modbus-RTU are widely available (e.g. [**ModbusMaster**](https://github.com/4-20ma/ModbusMaster)), enabling you to easily realize ESP32 projects around this board with **Modbus-RTU/Home Automation** support.
+
 The densly populated YB-ESP32-S3-RS485 board provides multiple GPIO pins (as shown below) and is still [**highly breadboard compatible**](https://github.com/yellobyte/YB-ESP32-S3-RS485/raw/main/doc/YB-ESP32-S3-RS485_on_breadboard.jpg) for it leaves one row of accessible breadboard contacts on either side of the board. All I/O ports (GPIOx) are labeled on both sides of the board.
 
 The onboard USB-Hub (USB high-speed HUB controller chip CH334) allows for simultaneous **JTAG debugging** and **serial output**. More info further down.
-
-Arduino libraries for RS-485/Modbus-RTU are widely available (e.g. [**ModbusMaster**](https://github.com/4-20ma/ModbusMaster)), enabling you to easily realize ESP32 projects around this board with **Modbus-RTU/Home Automation** support.
 
 Many more software examples (for PlatformIO and/or ArduinoIDE) are available in folder [examples](https://github.com/yellobyte/YB-ESP32-S3-RS485/tree/main/examples). They will help you getting used to the board and explore all hardware features.
 
