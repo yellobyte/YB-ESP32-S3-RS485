@@ -17,7 +17,7 @@ The densly populated YB-ESP32-S3-RS485 board provides multiple GPIO pins (as sho
 
 The onboard USB-Hub (USB high-speed HUB controller chip CH334) allows for simultaneous **JTAG debugging** and **serial output**. More info further down.
 
-Many more software examples (for PlatformIO and/or ArduinoIDE) are available in folder [examples](https://github.com/yellobyte/YB-ESP32-S3-RS485/tree/main/examples). They will help you getting used to the board and explore all hardware features.
+Software examples (for PlatformIO and/or ArduinoIDE) are available in folder [examples](https://github.com/yellobyte/YB-ESP32-S3-RS485/tree/main/examples). They will help you getting used to the board and explore all hardware features.
 
 ## Quickstart guide:
 **All YB-ESP32-S3-RS485 boards delivered have already been flashed (and tested) with software example 'Read-Modbus-RTU-PT100-Sensor'.**
@@ -46,10 +46,10 @@ The board will spare you the trouble of cabling two different Arduino boards and
 ## Board Pin Layout:
  ![](https://github.com/yellobyte/YB-ESP32-S3-RS485/raw/main/doc/YB-ESP32-S3-RS485_pinlayout.jpg)
 
-The boards **outline**, **block diagram** and **schematic** files are all located in folder [doc](https://github.com/yellobyte/YB-ESP32-S3-RS485/tree/main/doc), together with some data sheets for Espressif's MCU ESP32-S3 and the ESP32-S3-WROOM-1 modules.
+The boards **outline**, **schematic**, **pinout** and other files are all located in folder [doc](https://github.com/yellobyte/YB-ESP32-S3-RS485/tree/main/doc).
 
 ## Powering the board:
-The board uses a LDO to drop the external supply voltage (5VDC) and internally operates on 3.3Volt. There are two different ways to provide power to the board:
+The board uses a LDO to drop the external supply voltage 5VDC to 3.3VDC. The RS-485 transceiver needs both voltages whereas the WROOM-1 module is only connected to the 3.3VDC rail. There are two different ways to provide power to the board:
   - through the USB-C port
   - 5VDC applied to the 5V pin
 
