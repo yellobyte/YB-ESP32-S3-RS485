@@ -21,7 +21,7 @@ Many more software examples (for PlatformIO and/or ArduinoIDE) are available in 
 
 ## Quickstart guide:
 **All YB-ESP32-S3-RS485 boards delivered have already been flashed (and tested) with software example 'Read-Modbus-RTU-PT100-Sensor'.**
-- Step 1) apply power (via USB or 5V pins)
+- Step 1) apply power (via USB or 5V pin)
 - Step 2) watch the transmit LED 'T' blink when a Modbus request is sent. 
 If you happen to have a PT100 sensor module at hand pls connect it to the RS-485 bus and you will see the receive LED 'R' blink when a valid PT100 module Modbus response is replied.
 
