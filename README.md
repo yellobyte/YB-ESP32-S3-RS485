@@ -1,5 +1,5 @@
 ## YB-ESP32-S3-RS485 Development Board Overview:
-The **YB-ESP32-S3-RS485** is a general purpose development board supporting **Modbus-RTU** and **Home Automation** projects. It is based on Espressif's ESP32-S3 MCU and presently comes in different variants:
+The **YB-ESP32-S3-RS485** is a general purpose development board supporting **Modbus-RTU/ASCII** and **Home Automation** projects. It is based on Espressif's ESP32-S3 MCU and presently comes in different variants:
 - with **ESP32-S3-WROOM-1-N8R2 module** (8MB Flash/2MB PSRAM) or
 - with **ESP32-S3-WROOM-1-N16R2 module** (16MB Flash/2MB PSRAM)
 
@@ -7,11 +7,11 @@ The 4-layer board provides a **galvanically isolated RS-485 transceiver**, **CH3
 
 ![](https://github.com/yellobyte/YB-ESP32-S3-RS485/raw/main/doc/YB-ESP32-S3-RS485_board_top.jpg)
 
-The **galvanic isolation** of the RS-485 bus from the rest of the board provides extra security, stability and improves reliability. The board can be used in applications when the need for galvanically isolated interfaces in 'noisy' environments is critical.
+The RS-485 bus driver (transceiver) is **galvanically isolated** from the rest of the board which provides extra security, stability and improves reliability. The board can be used in applications when the need for galvanically isolated interfaces in 'noisy' environments is critical.
 
 The built-in **RS-485 bus termination** (120Ω) if needed can be disabled by opening the 2 labeled solder bridges 'BUS-TERM' on the bottom of the board.
 
-Arduino libraries for RS-485/Modbus-RTU are widely available (e.g. [**ModbusMaster**](https://github.com/4-20ma/ModbusMaster)), enabling you to easily realize ESP32 projects around this board with **Modbus-RTU/Home Automation** support.
+Arduino libraries for RS-485/Modbus-RTU are widely available (e.g. [**ModbusMaster**](https://github.com/4-20ma/ModbusMaster), [**modbus-esp**](https://github.com/emelianov/modbus-esp8266)), enabling you to easily realize ESP32 projects around this board with **Modbus-RTU/Home Automation** support.
 
 The densly populated YB-ESP32-S3-RS485 board provides multiple GPIO pins (as shown below) and is still [**highly breadboard compatible**](https://github.com/yellobyte/YB-ESP32-S3-RS485/raw/main/doc/YB-ESP32-S3-RS485_on_breadboard.jpg) for it leaves one row of accessible breadboard contacts on either side of the board. All I/O ports (GPIOx) are labeled on both sides of the board.
 
@@ -20,22 +20,19 @@ The onboard USB-Hub (USB high-speed HUB controller chip CH334) allows for simult
 Many more software examples (for PlatformIO and/or ArduinoIDE) are available in folder [examples](https://github.com/yellobyte/YB-ESP32-S3-RS485/tree/main/examples). They will help you getting used to the board and explore all hardware features.
 
 ## Quickstart guide:
-**All YB-ESP32-S3-RS485 boards delivered have already been flashed with software example '???'.**
-- Step 1) connect the board via Ethernet cable to a switch in your home LAN (make sure a DHCP service is available)
-- Step 2) apply power (via USB or 5V pins)
-
-That's it. The status LED 'IO47' will blink fast when power is applied and will blink slow as soon as an IP address has been assigned.
-
-Carrying on you could build and upload one of the many provided ArduinoIDE/PlatformIO [examples](https://github.com/yellobyte/YB-ESP32-S3-RS485/tree/main/examples) and build a webserver, sniff your home LAN and much more.
+**All YB-ESP32-S3-RS485 boards delivered have already been flashed (and tested) with software example 'Read-Modbus-RTU-PT100-Sensor'.**
+- Step 1) apply power (via USB or 5V pins)
+- Step 2) watch the transmit LED 'T' blink when a Modbus request is sent. 
+If you happen to have a PT100 sensor module at hand pls connect it to the RS-485 bus and you will see the receive LED 'R' blink when a valid PT100 module Modbus response is replied.
 
 ## YB-ESP32-S3-RS485 board features:
  - **ESP32-S3-WROOM-1-NxR2** module (8 or 16MB Flash, 2MB PSRAM)
  - **WiFi PCB antenna** (on ESP32-S3-WROOM-1 module)
- - **galvanically isolated RS-485 transceiver** chip [CA-IS2092A](https://e.chipanalog.com/products/interface/isolated/iso4/1129)
+ - **galvanically isolated RS-485 transceiver** with integrated DC-DC converter (ultra small [CA-IS2092A](https://e.chipanalog.com/products/interface/isolated/iso4/1129) chip)
  - the **CA-IS2092A** pins required to control the chip are hardwired to the ESP32-S3 GPIOs as follows:
    - *RS485_TXD - GPIO17* (for transmitting data)
    - *RS485_RXD - GPIO18* (for receiving data)
-   - *RS485_TX_ENABLE - GPIO21* (Only if solder bridge 'GPIO21' is closed. For MCU switching between receive [LOW] and transmit [HIGH]. If solder bridge 'AUTO' is closed (default) than switching between RS-485 bus receive/transmit is done automatically and GPIO21 is free for other use.)
+   - *RS485_TX_ENABLE - GPIO21* (Only if solder bridge 'GPIO21' is closed. For MCU switching between receive [LOW] and transmit [HIGH]. If **solder bridge 'AUTO' is closed (default**) than switching between RS-485 bus receive/transmit is done automatically and GPIO21 is free for other use.)
  - **control LEDs**. The LED labeled 'P' is connected to the 3.3V rail to indicate board power and the LED labeled 'IO47' is connected to GPIO47 which can be used as status LED, for debugging purposes etc. LEDs labeled 'R'/'T' indicate received/transmitted data on the RS-485 bus.
  - **USB-C** port connected to the onboard CH334 USB-Hub chip. This allows for simultaneous JTAG debugging and serial output as well as software upload (e.g. via ArduinoIDE, VSCode/PlatformIO etc). The ESP32-S3 contains an inbuild JTAG adapter hence [**debugging**](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/debugging) becomes fairly easy.
  - **hardware logic** for *automatic* software uploads (supported by most Development IDEs) via USB-C port using the onboard CH343 USB-UART bridge chip.
