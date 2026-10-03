@@ -1,5 +1,5 @@
 ## YB-ESP32-S3-RS485 Development Board Overview:
-The **YB-ESP32-S3-RS485** is a general purpose development board supporting **Modbus-RTU/ASCII** and **Home Automation** projects. It is based on Espressif's ESP32-S3 MCU and presently comes in different variants:
+The **YB-ESP32-S3-RS485** is a general purpose development board supporting **Modbus-RTU/ASCII** and **Home Automation** projects. It is based on Espressif's ESP32-S3 MCU and presently comes in two different variants:
 - with **ESP32-S3-WROOM-1-N8R2 module** (8MB Flash/2MB PSRAM) or
 - with **ESP32-S3-WROOM-1-N16R2 module** (16MB Flash/2MB PSRAM)
 
@@ -22,8 +22,8 @@ Many more software examples (for PlatformIO and/or ArduinoIDE) are available in 
 ## Quickstart guide:
 **All YB-ESP32-S3-RS485 boards delivered have already been flashed (and tested) with software example 'Read-Modbus-RTU-PT100-Sensor'.**
 - Step 1) apply power (via USB or 5V pin)
-- Step 2) watch the transmit LED 'T' blink when a Modbus request is sent. 
-If you happen to have a PT100 sensor module at hand pls connect it to the RS-485 bus and you will see the receive LED 'R' blink when a valid PT100 module Modbus response is replied.
+- Step 2) watch the transmit LED 'T' blink when a Modbus request is sent  
+If you happen to have a PT100 sensor module at hand pls connect it to the RS-485 bus, power it up and you will see the receive LED 'R' blink when the module replies.
 
 ## YB-ESP32-S3-RS485 board features:
  - **ESP32-S3-WROOM-1-NxR2** module (8 or 16MB Flash, 2MB PSRAM)
