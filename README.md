@@ -103,7 +103,7 @@ Device "USB JTAG/serial debug unit" lets you simultaneously debug the board via 
 ### Software Upload to the board:
 Uploading new software to boards with your IDE is a breeze. Select the correct COM port and upload the program. The integrated hardware logic will put the board into upload mode automatically.
 
-Below the PlatformIO log of flashing the dev board with provided software example [Read-Modbus-RTU-PT100-Sensor](https://github.com/yellobyte/YB-ESP32-S3-RS485/tree/main/examples/ArduinoIDE/Read-Modbus-RTU-PT100-Sensor). Please note: the example has been build with option `CORE_DEBUG_LEVEL=3` on PlatformIO (which is equivalent to `Core Debug Level: "Info"` on ArduinoIDE) and therefore produces only moderate output at startup.
+Below the PlatformIO log of flashing the dev board with provided software example [Read-Modbus-RTU-PT100-Sensor](https://github.com/yellobyte/YB-ESP32-S3-RS485/tree/main/examples/PlatformIO/Read-Modbus-RTU-PT100-Sensor). Please note: the example has been build with option `CORE_DEBUG_LEVEL=3` on PlatformIO (which is equivalent to `Core Debug Level: "Info"` on ArduinoIDE) and therefore produces only moderate output at startup.
 ```
 Uploading .pio\build\release\firmware.bin
 esptool v5.3.0
