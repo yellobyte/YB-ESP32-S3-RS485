@@ -6,15 +6,15 @@
   to the serial monitor.
 
   If the 'TX-ENABLE' solder bridge on the YB-ESP32-S3-RS485 board is set to 'AUTO'
-  then functions preTransmission()/postTransmission() are not used. In that case
-  you can uncomment '#define TX_ENABLE_GPIO21'.
+  (default) then functions preTransmission()/postTransmission() are not used. That's 
+  why '#define TX_ENABLE_GPIO21' is commented out.
 
   'Serial' is used for serial/debug output, 'Serial1' for RS-485 communication.
 
   The PT100 temperature sensor transmitter module by default communicates with
   9600Bd, 8 data bits, no parity and 1 stop bit.
 
-  Last updated 2026-09-26, ThJ <yellobyte@bluewin.ch>
+  Last updated 2026-10-06, ThJ <yellobyte@bluewin.ch>
 */
 
 #include <Arduino.h>
