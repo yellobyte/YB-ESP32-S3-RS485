@@ -7,7 +7,7 @@ The 4-layer board provides a **RS-485 transceiver**, **CH334 USB-Hub** chip, **C
 
 ![](https://github.com/yellobyte/YB-ESP32-S3-RS485/raw/main/doc/YB-ESP32-S3-RS485_board_top.jpg)
 
-The integrated RS-485 transceiver (bus driver) is **galvanically isolated** from the rest of the board which helps to improve stability and reliability in 'noisy' environments possibly affecting the RS-485 bus. However, 'galvanically isolated' does **not** mean you can forget common sense and deploy this board in a high voltage development project. You need to be a trained electrician/engineer to do that ! Always be aware, high voltages > ~60V can cause harm to living beings !
+The integrated RS-485 transceiver (bus driver) is **galvanically isolated** from the rest of the board which helps to improve communication stability and reliability in 'noisy' environments possibly affecting the RS-485 bus.  **Warning:** 'galvanically isolated' does **not** mean you can forget common sense and deploy this board in projects where there is a risk of the RS-485 bus being exposed to higher voltages. The galvanic isolation of the transceiver is solely for improving communication and **NOT** to protect against higher voltages !!
 
 The built-in **RS-485 bus termination** (120Ω) if needed can be disabled by opening the 2 labeled solder bridges 'BUS-TERM' on the bottom of the board.
 
