@@ -8,7 +8,8 @@ The 4-layer board provides a **RS-485 transceiver**, **CH334 USB-Hub** chip, **C
 ![](https://github.com/yellobyte/YB-ESP32-S3-RS485/raw/main/doc/YB-ESP32-S3-RS485_board_top.jpg)
 
 The integrated RS-485 transceiver (bus driver) is **galvanically isolated** from the rest of the board, intended to improve communication stability and reliability in 'noisy' environments possibly affecting the RS-485 bus.  
-**WARNING:** 'galvanically isolated' does **NOT** mean you can forget common sense and deploy this board in projects where there is a risk of the RS-485 bus being exposed to high voltages. The galvanic isolation of the transceiver is intended solely for improving bus communication and **NOT** for protection against high voltages !! Be reminded, voltages higher than ~60V can severely harm living beings !
+
+**WARNING:** 'galvanically isolated' does **NOT** mean you can forget common sense and deploy this board in projects where there is a risk of the RS-485 bus being exposed to high voltages. The galvanic isolation of the transceiver is intended solely for improving bus communication and **NOT** for protection against high voltages !! Be reminded, voltages higher than ~60V can severely harm living beings.
 
 The built-in **RS-485 bus termination** (120Ω) if needed can be disabled by opening the 2 labeled solder bridges 'BUS-TERM' on the bottom of the board.
 
@@ -34,7 +35,7 @@ If you happen to have a PT100 sensor module at hand pls connect it to the RS-485
    - *RS485_TXD - GPIO17* (for transmitting data)
    - *RS485_RXD - GPIO18* (for receiving data)
    - *RS485_TX_ENABLE - GPIO21* (Only if solder bridge 'GPIO21' is closed. For MCU switching between receive [LOW] and transmit [HIGH]. If **solder bridge 'AUTO' is closed (default**) than switching between RS-485 bus receive/transmit is done automatically and GPIO21 is free for other use.)
- - **control LEDs**. The LED labeled 'P' is connected to the 3.3V rail to indicate board power and the LED labeled 'IO47' is connected to GPIO47 which can be used as status LED, for debugging purposes etc. LEDs labeled 'R'/'T' indicate received/transmitted data on the RS-485 bus.
+ - **control LEDs**. The LED labeled 'P' is connected to the 3.3V rail to indicate board power and the LED labeled 'IO47' is connected to GPIO47 usable e.g. as status LED, for debugging purposes etc. LEDs labeled 'R'/'T' indicate received/transmitted data on the RS-485 bus.
  - **USB-C** port connected to the onboard CH334 USB-Hub chip. This allows for simultaneous JTAG debugging and serial output as well as software upload (e.g. via ArduinoIDE, VSCode/PlatformIO etc). The ESP32-S3 contains an inbuild JTAG adapter hence [**debugging**](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/debugging) becomes fairly easy.
  - **hardware logic** for *automatic* software uploads (supported by most Development IDEs) via USB-C port using the onboard CH343 USB-UART bridge chip.
  - **pushbuttons**. One is labeled 'R' and resets the ESP32-S3 (shorts EN pin to ground) and the other one is labeled 'B' and shorts GPIO0 to ground when pressed. The latter is sometimes needed to force the board into boot mode.
