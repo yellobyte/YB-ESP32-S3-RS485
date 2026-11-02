@@ -15,7 +15,7 @@ between ports. Furthermore, it contributes to the protection of the board as wel
 The built-in **RS-485 bus termination** (120Ω) if needed can be disabled by opening the 2 labeled solder bridges 'BUS-TERM' on the bottom of the board.
 
 Arduino libraries for RS-485/Modbus-RTU are widely available (e.g. [**ModbusMaster**](https://github.com/4-20ma/ModbusMaster), [**modbus-esp**](https://github.com/emelianov/modbus-esp8266)), enabling you to easily realize ESP32 projects around this board with **Modbus-RTU/ASCII** support, e.g.:
-  - Smart Home
+  - Smart Home (Home Automation)
   - Building/Access Control
   - Lighting Control
 
