@@ -7,13 +7,17 @@ The 4-layer board provides a **RS-485 transceiver**, **CH334 USB-Hub** chip, **C
 
 ![](https://github.com/yellobyte/YB-ESP32-S3-RS485/raw/main/doc/YB-ESP32-S3-RS485_board_top.jpg)
 
-The integrated RS-485 transceiver (bus driver) is **galvanically isolated** from the rest of the board, which helps to improve communication stability and reliability in 'noisy' environments possibly affecting the RS-485 bus. As a positive side effect, it contributes to the protection of the board as well as any components that may be connected to it.   
+The integrated RS-485 transceiver (bus driver) is **galvanically isolated** from the rest of the board, which helps to improve communication stability and reliability in 'noisy' environments. The isolation breaks possible ground loops and reduces noise where there are differences in ground potential
+between ports. Furthermore, it contributes to the protection of the board as well as any components that may be connected to it.   
 
 **WARNING:** 'galvanically isolated' does **NOT** mean you can forget common sense and deploy this board in projects where there is a risk of the RS-485 bus being exposed to high voltages. The galvanic isolation of the transceiver serves primarily to improve bus communication, rather than to provide protection against high voltages ! Be reminded, voltages higher than ~60V can severely harm living beings.
 
 The built-in **RS-485 bus termination** (120Ω) if needed can be disabled by opening the 2 labeled solder bridges 'BUS-TERM' on the bottom of the board.
 
-Arduino libraries for RS-485/Modbus-RTU are widely available (e.g. [**ModbusMaster**](https://github.com/4-20ma/ModbusMaster), [**modbus-esp**](https://github.com/emelianov/modbus-esp8266)), enabling you to easily realize ESP32 projects around this board with **Modbus-RTU/ASCII** support.
+Arduino libraries for RS-485/Modbus-RTU are widely available (e.g. [**ModbusMaster**](https://github.com/4-20ma/ModbusMaster), [**modbus-esp**](https://github.com/emelianov/modbus-esp8266)), enabling you to easily realize ESP32 projects around this board with **Modbus-RTU/ASCII** support, e.g.:
+  - Smart Home
+  - Industrial/Building/Access Control
+  - Lighting Control
 
 The densly populated YB-ESP32-S3-RS485 board provides multiple GPIO pins (as shown below) and is still [**highly breadboard compatible**](https://github.com/yellobyte/YB-ESP32-S3-RS485/raw/main/doc/YB-ESP32-S3-RS485_on_breadboard.jpg) for it leaves one row of accessible breadboard contacts on either side of the board. All I/O ports (GPIOx) are labeled on both sides of the board.
 
@@ -30,7 +34,14 @@ If you happen to have a PT100 sensor module at hand pls connect it to the RS-485
 ## YB-ESP32-S3-RS485 board features:
  - **ESP32-S3-WROOM-1-NxR2** module (8 or 16MB Flash, 2MB PSRAM)
  - **WiFi PCB antenna** (on ESP32-S3-WROOM-1 module)
- - **RS-485 transceiver** (galvanically isolated from board) with integrated DC-DC converter (ultra small CA-IS2092A chip)
+ - **RS-485 transceiver** (ultra small CA-IS2092A chip):
+   - galvanically isolated from board
+   - integrated ESD protection
+   - integrated DC-DC converter
+   - 5V operating voltage on bus
+   - data rate up to 500kbps
+   - half duplex mode
+   - receiver is 1/8-standard-unit load (with on-board bus termination disabled)
  - the **CA-IS2092A** pins required to control the chip are hardwired to the ESP32-S3 GPIOs as follows:
    - *RS485_TXD - GPIO17* (for transmitting data)
    - *RS485_RXD - GPIO18* (for receiving data)
