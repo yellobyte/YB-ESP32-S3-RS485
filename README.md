@@ -16,7 +16,7 @@ The built-in **RS-485 bus termination** (120Ω) if needed can be disabled by ope
 
 Arduino libraries for RS-485/Modbus-RTU are widely available (e.g. [**ModbusMaster**](https://github.com/4-20ma/ModbusMaster), [**modbus-esp**](https://github.com/emelianov/modbus-esp8266)), enabling you to easily realize ESP32 projects around this board with **Modbus-RTU/ASCII** support, e.g.:
   - Smart Home
-  - Industrial/Building/Access Control
+  - Building/Access Control
   - Lighting Control
 
 The densly populated YB-ESP32-S3-RS485 board provides multiple GPIO pins (as shown below) and is still [**highly breadboard compatible**](https://github.com/yellobyte/YB-ESP32-S3-RS485/raw/main/doc/YB-ESP32-S3-RS485_on_breadboard.jpg) for it leaves one row of accessible breadboard contacts on either side of the board. All I/O ports (GPIOx) are labeled on both sides of the board.
