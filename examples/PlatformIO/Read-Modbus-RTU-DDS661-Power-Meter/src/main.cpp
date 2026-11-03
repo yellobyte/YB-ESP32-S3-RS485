@@ -20,7 +20,7 @@
 #include <Arduino.h>
 #include <ModbusMaster.h>
 
-//#define TX_ENABLE_GPIO21  // GPIO21 used to switch between RS-485 RX/TX
+//#define TX_ENABLE_GPIO21  // GPIO21 switches between RS-485 RX/TX
 
 ModbusMaster node;
 

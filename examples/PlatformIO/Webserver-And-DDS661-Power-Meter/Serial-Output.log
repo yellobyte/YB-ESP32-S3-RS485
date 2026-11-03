@@ -1,0 +1,106 @@
+--- Terminal on COM3 | 115200 8-N-1
+--- Available filters and text transformations: debug, default, direct, esp32_exception_decoder, hexlify, log2file, nocontrol, printable, send_on_enter, time
+--- More details at https://bit.ly/pio-monitor-filters
+--- Quit: Ctrl+C | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H
+17:39:29.683 > ESP-ROM:esp32s3-20210327
+17:39:29.690 > Build:Mar 27 2021
+17:39:29.696 > rst:0x1 (POWERON),boot:0x8 (SPI_FAST_FLASH_BOOT)
+17:39:29.696 > SPIWP:0xee
+17:39:29.696 > mode:DIO, clock div:1
+17:39:29.701 > load:0x3fce2820,len:0x10cc
+17:39:29.701 > load:0x403c8700,len:0xc2c
+17:39:29.701 > load:0x403cb700,len:0x30b0
+17:39:29.702 > entry 0x403c88b8
+17:39:29.885 > running example "DDS661 Modbus RTU Power Meter & Webserver":
+17:39:29.888 > connecting to WiFi network "MNt1"
+17:39:29.927 > ..[  2229][W][STA.cpp:145] _onStaArduinoEvent(): Reason: 4 - ASSOC_EXPIRE
+17:39:33.933 > 
+17:39:33.933 > connected successfully to "MNt1". IP address: 192.168.1.64
+17:39:34.024 > Voltage: raw data: 0x436c 0x4ccd --> value: 236.30 V
+17:39:34.164 > Current: raw data: 0x3d0b 0x4396 --> value: 0.03 A
+17:39:34.304 > Frequency: raw data: 0x4248 0x0000 --> value: 50.00 Hz
+17:39:34.470 > Power factor: raw data: 0x3f80 0x0000 --> value: 1.00 cos φ
+17:39:34.600 > Power: raw data: 0x0000 0x0000 --> value: 0.00 W
+17:39:34.733 > Energy: raw data: 0x3cf5 0xc28f --> value: 0.03 kWh
+17:39:34.733 > 
+17:39:34.934 > new client
+17:39:34.934 > GET / HTTP/1.1
+17:39:34.934 > Host: 192.168.1.64
+17:39:34.940 > User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:159.0) Gecko/20100101 Firefox/159.0
+17:39:34.951 > Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+17:39:34.956 > Accept-Language: de,en-US;q=0.9,en;q=0.8
+17:39:34.957 > Accept-Encoding: gzip, deflate
+17:39:34.957 > Sec-GPC: 1
+17:39:34.962 > Connection: keep-alive
+17:39:34.962 > Referer: http://192.168.1.64/
+17:39:34.966 > Upgrade-Insecure-Requests: 1
+17:39:34.967 > Priority: u=0, i
+17:39:34.967 > Cache-Control: max-age=0
+17:39:34.967 > 
+17:39:34.985 > client has disconnected
+17:39:39.820 > Voltage: raw data: 0x436c 0x8000 --> value: 236.50 V
+17:39:39.960 > Current: raw data: 0x3d0b 0x4396 --> value: 0.03 A
+17:39:40.101 > Frequency: raw data: 0x4248 0x0000 --> value: 50.00 Hz
+17:39:40.267 > Power factor: raw data: 0x3f80 0x0000 --> value: 1.00 cos φ
+17:39:40.396 > Power: raw data: 0x0000 0x0000 --> value: 0.00 W
+17:39:40.489 > new client
+17:39:40.490 > GET / HTTP/1.1
+17:39:40.490 > Host: 192.168.1.64
+17:39:40.495 > User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:159.0) Gecko/20100101 Firefox/159.0
+17:39:40.506 > Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+17:39:40.512 > Accept-Language: de,en-US;q=0.9,en;q=0.8
+17:39:40.512 > Accept-Encoding: gzip, deflate
+17:39:40.512 > Sec-GPC: 1
+17:39:40.517 > Connection: keep-alive
+17:39:40.517 > Referer: http://192.168.1.64/
+17:39:40.521 > Upgrade-Insecure-Requests: 1
+17:39:40.522 > Priority: u=0, i
+17:39:40.522 > Cache-Control: max-age=0
+17:39:40.522 > 
+17:39:40.529 > Energy: raw data: 0x3cf5 0xc28f --> value: 0.03 kWh
+17:39:40.530 > 
+17:39:40.542 > client has disconnected
+17:39:45.616 > Voltage: raw data: 0x436c 0xb333 --> value: 236.70 V
+17:39:45.756 > Current: raw data: 0x3d0b 0x4396 --> value: 0.03 A
+17:39:45.897 > Frequency: raw data: 0x4248 0x0000 --> value: 50.00 Hz
+17:39:46.047 > new client
+17:39:46.047 > GET / HTTP/1.1
+17:39:46.047 > Host: 192.168.1.64
+17:39:46.052 > User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:159.0) Gecko/20100101 Firefox/159.0
+17:39:46.063 > Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+17:39:46.069 > Accept-Language: de,en-US;q=0.9,en;q=0.8
+17:39:46.069 > Accept-Encoding: gzip, deflate
+17:39:46.074 > Sec-GPCPower factor: raw data: 0x3f80 0x0000 --> value: 1.00 cos φ
+17:39:46.074 > : 1
+17:39:46.080 > Connection: keep-alive
+17:39:46.080 > Referer: http://192.168.1.64/
+17:39:46.080 > Upgrade-Insecure-Requests: 1
+17:39:46.084 > Priority: u=0, i
+17:39:46.084 > Cache-Control: max-age=0
+17:39:46.084 > 
+17:39:46.098 > client has disconnected
+17:39:46.202 > Power: raw data: 0x0000 0x0000 --> value: 0.00 W
+17:39:46.336 > Energy: raw data: 0x3cf5 0xc28f --> value: 0.03 kWh
+17:39:46.336 > 
+17:39:51.422 > Voltage: raw data: 0x436c 0x999a --> value: 236.60 V
+17:39:51.562 > Current: raw data: 0x3d0b 0x4396 --> value: 0.03 A
+17:39:51.603 > new client
+17:39:51.603 > GET / HTTP/1.1
+17:39:51.603 > Host: 192.168.1.64
+17:39:51.608 > User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:159.0) Gecko/20100101 Firefox/159.0
+17:39:51.619 > Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+17:39:51.625 > Accept-Language: de,en-US;q=0.9,en;q=0.8
+17:39:51.625 > Accept-Encoding: gzip, deflate
+17:39:51.625 > Sec-GPC: 1
+17:39:51.630 > Connection: keep-alive
+17:39:51.631 > Referer: http://192.168.1.64/
+17:39:51.635 > Upgrade-Insecure-Requests: 1
+17:39:51.635 > Priority: u=0, i
+17:39:51.635 > Cache-Control: max-age=0
+17:39:51.635 > 
+17:39:51.655 > client has disconnected
+17:39:51.703 > Frequency: raw data: 0x4248 0x0000 --> value: 50.00 Hz
+17:39:51.869 > Power factor: raw data: 0x3f80 0x0000 --> value: 1.00 cos φ
+17:39:51.998 > Power: raw data: 0x0000 0x0000 --> value: 0.00 W
+17:39:52.132 > Energy: raw data: 0x3cf5 0xc28f --> value: 0.03 kWh
+17:39:52.132 > 

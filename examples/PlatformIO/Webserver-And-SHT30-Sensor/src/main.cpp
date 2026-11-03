@@ -14,7 +14,7 @@
 #include <WiFi.h>
 #include <ModbusMaster.h>
 
-//#define TX_ENABLE_GPIO21  // GPIO21 used to switch between RS-485 RX/TX
+//#define TX_ENABLE_GPIO21  // GPIO21 switches between RS-485 RX/TX
 
 const char ssid[] = "MySSID";
 const char pass[] = "MyPASSWORD";
@@ -100,7 +100,7 @@ void loop() {
           // meta tag makes browser refresh page every 5 seconds:
           client.println("<meta http-equiv=\"refresh\" content=\"5\">");
           // simple page
-          client.println("<style>html {font-family: Helvetica; font-size: 30px; display: inline-block; text-align: center;}</style>");
+          client.println("<style>html {font-family: Helvetica; font-size: 30px; text-align: center;}</style>");
           client.print("Actual SHT30 Sensor Readings: ");
           client.println("<br />");
           client.print(str);
