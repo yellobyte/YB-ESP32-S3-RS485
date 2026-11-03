@@ -8,7 +8,7 @@ The 4-layer board provides a **RS-485 transceiver**, **CH334 USB-Hub** chip, **C
 ![](https://github.com/yellobyte/YB-ESP32-S3-RS485/raw/main/doc/YB-ESP32-S3-RS485_board_top.jpg)
 
 The integrated RS-485 transceiver (bus driver) is **galvanically isolated** from the rest of the board, which helps to improve communication stability and reliability in 'noisy' environments. The isolation breaks possible ground loops and reduces noise where there are differences in ground potential
-between ports. Furthermore, it contributes to the protection of the board as well as any components that may be connected to it.   
+between ports. Furthermore, it contributes to the protection of the board as well as any components that may be connected to it.
 
 **WARNING:** 'galvanically isolated' does **NOT** mean you can forget common sense and deploy this board in projects where there is a risk of the RS-485 bus being exposed to high voltages. The galvanic isolation of the transceiver serves primarily to improve bus communication, rather than to provide protection against high voltages ! Be reminded, voltages higher than ~60V can severely harm living beings.
 
@@ -28,7 +28,7 @@ Software examples (for PlatformIO and/or ArduinoIDE) are available in folder [ex
 ## Quickstart guide:
 **All YB-ESP32-S3-RS485 boards delivered have already been flashed (and tested) with software example 'Read-Modbus-RTU-PT100-Sensor'.**
 - Step 1) apply power (via USB or 5V pin)
-- Step 2) watch the transmit LED 'T' blink when a Modbus request is sent  
+- Step 2) watch the transmit LED 'T' blink when a Modbus request is sent
 If you happen to have a PT100 sensor module at hand pls connect it to the RS-485 bus, power it up and you will see the receive LED 'R' blink when the module replies.
 
 ## YB-ESP32-S3-RS485 board features:
@@ -66,7 +66,7 @@ The board uses a LDO to drop the external supply voltage 5VDC to 3.3VDC. The RS-
   - through the USB-C port
   - 5VDC applied to the 5V pin
 
-Normal operating current of the idle board (-N8R2, all GPIOs/RS-485 bus unconnected, WiFi disabled) is about 90mA. With RS-485 bus and WiFi active the board draws about 120...160mA (mainly depending on WiFi link).
+Normal operating current of the idle board (-N8R2, all GPIOs/RS-485 bus unconnected, WiFi disabled) is about 85mA. With RS-485 bus and WiFi active the board draws about 100...160mA (mainly depending on WiFi link).
 
 ## Application hints:
 The board uses the popular WCH chips CH334P (USB-Hub) and CH343P (USB-UART bridge). If you haven't done yet then you need to install the CH343 Driver on your Laptop/PC. For Windows go [here](https://www.wch-ic.com/search?t=all&q=ch343) and download and install the newest version of the driver. Linux provides CH34x drivers by default.
@@ -95,7 +95,7 @@ Just create a new project and give it a name, then go to board selection, enter 
 
  ![](https://github.com/yellobyte/YB-ESP32-S3-RS485/raw/main/doc/YB-ESP32-S3-RS485_PlatformIO_board_selection.jpg)
 
-**Important:**  
+**Important:**
 If the WROOM module features **16MB** flash memory, add the following lines to the *platformio.ini* project file's respective **[env]** section to account for the 16MB flash available. Otherwise you are restricted to 8MB (as set in the *.json board file).
 ```
 ...
@@ -170,7 +170,7 @@ Flash will be erased from 0x00010000 to 0x00056fff...
 Compressed 289568 bytes to 165141...
 ...
 ...
-Writing at 0x00056b20 [██████████████████████████████] 100.0% 165141/165141 bytes... 
+Writing at 0x00056b20 [██████████████████████████████] 100.0% 165141/165141 bytes...
 Wrote 289568 bytes (165141 compressed) at 0x00010000 in 2.4 seconds (960.9 kbit/s).
 Verifying written data...
 Hash of data verified.
@@ -249,7 +249,7 @@ https://docs.micropython.org/en/latest/esp32/quickref.html
 
 ## General notes:
 
-1) The ESP32-S3-WROOM-1 module family comprises several [**versions**](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/ESP32_specs_and_manuals/ESP32-S3-WROOM-1(U)_Variants.jpg). The **-1** versions come with embedded PCB antenna, the **-1U** versions with IPEX antenna socket instead. The extension -Nx(Ry) defines the amount of integrated FLASH/PSRAM, e.g. -N4 (4MB Flash, no PSRAM), -N4R2 (4 MB Flash, 2MB PSRAM), -N8R2 (8 MB Flash, 2MB PSRAM) etc.  
+1) The ESP32-S3-WROOM-1 module family comprises several [**versions**](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/ESP32_specs_and_manuals/ESP32-S3-WROOM-1(U)_Variants.jpg). The **-1** versions come with embedded PCB antenna, the **-1U** versions with IPEX antenna socket instead. The extension -Nx(Ry) defines the amount of integrated FLASH/PSRAM, e.g. -N4 (4MB Flash, no PSRAM), -N4R2 (4 MB Flash, 2MB PSRAM), -N8R2 (8 MB Flash, 2MB PSRAM) etc.
 
 2) The ESP32-S3 includes four SPI controllers: SPI0, SPI1, SPI2(Fast SPI) and SPI3. SPI0/1 are reserved for Flash and PSRAM (if available) and should be left alone!
 The remaining two are available for the public. In the ESP32-S3's Arduino universe SPI2 & SPI3 are named FSPI & HSPI. FSPI by default is assigned to GPIOs 10-15 and routed via IO MUX. However, both can get pinned to any available GPIO pin if needed but FSPI will be slower if routed through GPIO Matrix
