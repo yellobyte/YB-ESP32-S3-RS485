@@ -1,6 +1,6 @@
 /*
   This example reads a SHT30 ModbusRTU Temperature & Humidity Sensor and presents
-  the readings on a local web page. 
+  the readings on a local web page.
 
   'Serial' is used for serial/debug output, 'Serial1' for RS-485 communication.
 
@@ -17,7 +17,7 @@
 //#define TX_ENABLE_GPIO21  // GPIO21 used to switch between RS-485 RX/TX
 
 const char ssid[] = "MySSID";
-const char pass[] = "MyPASSWORD"; 
+const char pass[] = "MyPASSWORD";
 
 ModbusMaster sht30;
 WiFiServer server(80);
@@ -33,7 +33,7 @@ void postTransmission() {
 
 void setup() {
   pinMode(LED_BUILTIN, OUTPUT);
-  digitalWrite(LED_BUILTIN, LOW);  
+  digitalWrite(LED_BUILTIN, LOW);
   Serial.begin(115200);                                   // serial output
   Serial1.begin(9600, SERIAL_8N1, RS485_RXD, RS485_TXD);  // RS-485 communication
   Serial.println("running example \"SHT30 Sensor & Webserver\":");
@@ -45,9 +45,9 @@ void setup() {
     Serial.print(".");
     delay(2000);
   }
-  Serial.printf("\nconnected successfully to \"%s\". IP address: %s\n", 
-                  ssid, WiFi.localIP().toString().c_str()); 
-  digitalWrite(LED_BUILTIN, HIGH); 
+  Serial.printf("\nconnected successfully to \"%s\". IP address: %s\n",
+                  ssid, WiFi.localIP().toString().c_str());
+  digitalWrite(LED_BUILTIN, HIGH);
 
   server.begin();                             // starts the local webserver
   sht30.begin(1, Serial1);                    // slave ID=1, comm via Serial1
@@ -66,11 +66,11 @@ void loop() {
   float temp, humidity;
 
   result = sht30.readHoldingRegisters(0, 2);  // function code 0x03
-  
+
   if (result == sht30.ku8MBSuccess) {
     temp = (float)(sht30.getResponseBuffer(1) / 10.0);
     humidity = (float)(sht30.getResponseBuffer(0) / 10.0);
-    snprintf(str, sizeof(str), "Temperature: %.1f &degC, Relative Humidity: %.1f %%", temp, humidity);
+    snprintf(str, sizeof(str), "Temperature: %.1f &deg;C, Relative Humidity: %.1f %%", temp, humidity);
     Serial.printf("Temp: %.1f °C, Humidity: %.1f %%\n", temp, humidity);
   }
   else {
@@ -120,7 +120,7 @@ void loop() {
     delay(10);
     client.stop();
     Serial.println("client has disconnected");
-  }  
+  }
 
   delay(1000);
 }
