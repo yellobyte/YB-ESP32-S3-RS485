@@ -15,7 +15,7 @@ between ports. Furthermore, it contributes to the protection of the board as wel
 The built-in **RS-485 bus termination** (120Ω) if needed can be disabled by opening the 2 labeled solder bridges 'BUS-TERM' on the bottom of the board.
 
 Arduino libraries for RS-485/Modbus-RTU are widely available (e.g. [**ModbusMaster**](https://github.com/4-20ma/ModbusMaster), [**modbus-esp**](https://github.com/emelianov/modbus-esp8266)), enabling you to easily realize ESP32 projects around this board with **Modbus-RTU/ASCII** support, e.g.:
-  - Smart Home (Home Automation)
+  - Home Automation (Smart Home)
   - Building/Access Control
   - Lighting Control
 
@@ -48,8 +48,8 @@ If you happen to have a PT100 sensor module at hand pls connect it to the RS-485
    - *RS485_TX_ENABLE - GPIO21* (Only if solder bridge 'GPIO21' is closed. For MCU switching between receive [LOW] and transmit [HIGH]. If **solder bridge 'AUTO' is closed (default**) than switching between RS-485 bus receive/transmit is done automatically and GPIO21 is free for other use.)
  - **control LEDs**. The LED labeled 'P' is connected to the 3.3V rail to indicate board power and the LED labeled 'IO47' is connected to GPIO47 usable e.g. as status LED, for debugging purposes etc. LEDs labeled 'R'/'T' indicate received/transmitted data on the RS-485 bus.
  - **USB-C** port connected to the onboard CH334 USB-Hub chip. This allows for simultaneous JTAG debugging and serial output as well as software upload (e.g. via ArduinoIDE, VSCode/PlatformIO etc). The ESP32-S3 contains an inbuild JTAG adapter hence [**debugging**](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/debugging) becomes fairly easy.
- - **hardware logic** for *automatic* software uploads (supported by most Development IDEs) via USB-C port using the onboard CH343 USB-UART bridge chip.
- - **pushbuttons**. One is labeled 'R' and resets the ESP32-S3 (shorts EN pin to ground) and the other one is labeled 'B' and shorts GPIO0 to ground when pressed. The latter is sometimes needed to force the board into boot mode.
+ - **hardware logic** for *automatic* software uploads (supported by most Development IDEs) via USB-C port using the onboard CH343 USB-UART bridge chip. How this works is explained [here](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/reset_and_software_upload).
+ - **pushbuttons**. One is labeled 'R' and resets the ESP32-S3 (shorts EN pin to ground) and the other one is labeled 'B' and shorts GPIO0 to ground when pressed. It allows to manually put the board into boot mode.
  - **lots of available GPIOs** next to the ones already mentioned above.
 
 The board will spare you the trouble of cabling different Arduino/extension boards and saves a lot of room on the breadboard as well:
@@ -66,7 +66,7 @@ The board uses a LDO to drop the external supply voltage 5VDC to 3.3VDC. The RS-
   - through the USB-C port
   - 5VDC applied to the 5V pin
 
-Normal operating current of the idle board (-N8R2, all GPIOs/RS-485 bus unconnected, WiFi disabled) is about 90mA. With RS-485 bus and WiFi active the board draws about 150...160mA (mainly depending on WiFi link).
+Normal operating current of the idle board (-N8R2, all GPIOs/RS-485 bus unconnected, WiFi disabled) is about 90mA. With RS-485 bus and WiFi active the board draws about 120...160mA (mainly depending on WiFi link).
 
 ## Application hints:
 The board uses the popular WCH chips CH334P (USB-Hub) and CH343P (USB-UART bridge). If you haven't done yet then you need to install the CH343 Driver on your Laptop/PC. For Windows go [here](https://www.wch-ic.com/search?t=all&q=ch343) and download and install the newest version of the driver. Linux provides CH34x drivers by default.
