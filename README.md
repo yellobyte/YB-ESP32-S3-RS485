@@ -7,10 +7,9 @@ The 4-layer board provides a **RS-485 transceiver**, **CH334 USB-Hub** chip, **C
 
 ![](https://github.com/yellobyte/YB-ESP32-S3-RS485/raw/main/doc/YB-ESP32-S3-RS485_board_top.jpg)
 
-The integrated RS-485 transceiver (bus driver) is **galvanically isolated** from the rest of the board, which helps to improve communication stability and reliability in 'noisy' environments. The isolation breaks possible ground loops and reduces noise where there are differences in ground potential
-between ports. Furthermore, it contributes to the protection of the board as well as any components that may be connected to it.
+The integrated RS-485 transceiver (bus driver) is **galvanically isolated** from the rest of the board, which helps to improve communication stability and reliability in 'noisy' environments. The isolation breaks possible ground loops and reduces noise where there are differences in ground potential between ports. Furthermore, it contributes to the protection of the board as well as any components that may be connected to it.
 
-**WARNING:** 'galvanically isolated' does **NOT** mean you can forget common sense and deploy this board in projects where there is a risk of the RS-485 bus being exposed to high voltages. The galvanic isolation of the transceiver serves primarily to improve bus communication, rather than to provide protection against high voltages ! Be reminded, voltages higher than ~60V can severely harm living beings.
+**WARNING:** 'galvanically isolated' does **NOT** mean you can forget common sense. Do not deploy this board in environments where there is a risk of the RS-485 bus being exposed to high voltages! The galvanic isolation of the transceiver serves primarily to improve bus communication, rather than to provide protection against high voltages. Be reminded, voltages higher than ~60V can severely harm humans.
 
 The built-in **RS-485 bus termination** (120Ω) if needed can be disabled by opening the 2 labeled solder bridges 'BUS-TERM' on the bottom of the board.
 
@@ -66,7 +65,7 @@ The board uses a LDO to drop the external supply voltage 5VDC to 3.3VDC. The RS-
   - through the USB-C port
   - 5VDC applied to the 5V pin
 
-Normal operating current of the idle board (-N8R2, all GPIOs/RS-485 bus unconnected, WiFi disabled) is about 85mA. With RS-485 bus and WiFi active the board draws about 100...160mA (mainly depending on WiFi link).
+Normal operating current of the idle board (-N8R2, all GPIOs/RS-485 bus unconnected, WiFi disabled) is about 85mA. With active RS-485 bus and WiFi the board draws about 90...160mA (mainly depending on WiFi link).
 
 ## Application hints:
 The board uses the popular WCH chips CH334P (USB-Hub) and CH343P (USB-UART bridge). If you haven't done yet then you need to install the CH343 Driver on your Laptop/PC. For Windows go [here](https://www.wch-ic.com/search?t=all&q=ch343) and download and install the newest version of the driver. Linux provides CH34x drivers by default.
