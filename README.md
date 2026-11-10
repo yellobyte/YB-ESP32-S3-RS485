@@ -7,7 +7,7 @@ The 4-layer board provides a **RS-485 transceiver**, **CH334 USB-Hub** chip, **C
 
 ![](https://github.com/yellobyte/YB-ESP32-S3-RS485/raw/main/doc/YB-ESP32-S3-RS485_top.jpg)
 
-The integrated RS-485 transceiver (bus driver) is **galvanically isolated** from the rest of the board, which helps to improve communication stability and reliability in 'noisy' environments. The isolation breaks possible ground loops and reduces noise, e.g. if there are differences in ground potential between ports or devices are frequently switched on/off in the near vicinity. Furthermore, it contributes to the protection of the board as well as any components that may be connected to it.
+The integrated RS-485 transceiver (bus driver) is **galvanically isolated** from the rest of the board, which helps to improve communication stability and reliability in 'noisy' environments. The isolation breaks possible ground loops and reduces noise, e.g. if there are differences in ground potential between ports, devices are frequently switched on/off in the near vicinity, etc. Furthermore, it contributes to the protection of the board as well as any components that may be connected to it.
 
 **A word of caution:** 'galvanically isolated' does **NOT** mean you can abandon common sense. Do not deploy this board in environments where there is a risk of the RS-485 bus being exposed to high voltages! The galvanic isolation of the transceiver is primarily intended to improve bus communication, not to provide protection against harmful voltages. Be reminded, sustained voltages exceeding ~50V can be lethal to humans.
 
@@ -17,6 +17,7 @@ Arduino libraries for RS-485/Modbus-RTU are widely available (e.g. [**ModbusMast
   - Home Automation (Smart Home)
   - Building/Access Control
   - Lighting Control
+  - Industrial Control Systems
 
 The densly populated YB-ESP32-S3-RS485 board provides multiple GPIO pins (as shown below) and is still [**highly breadboard compatible**](https://github.com/yellobyte/YB-ESP32-S3-RS485/raw/main/doc/YB-ESP32-S3-RS485_on_breadboard.jpg) for it leaves one row of accessible breadboard contacts on either side of the board. All I/O ports (GPIOx) are labeled on both sides of the board.
 
