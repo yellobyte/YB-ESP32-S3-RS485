@@ -5,7 +5,7 @@ The **YB-ESP32-S3-RS485** is a general purpose development board supporting **Mo
 
 The 4-layer board provides a **RS-485 transceiver**, **CH334 USB-Hub** chip, **CH343 USB-UART** bridge chip, four **status LEDs** and a **USB-C connector** for software upload, serial output, JTAG debugging and feeding power to the board. The board is available on sales platforms [eBay](https://www.ebay.de/sch/i.html?_nkw=yb-esp32-s3) and [Ricardo.ch](https://www.ricardo.ch/en/s/YB-ESP32-S3).
 
-![](https://github.com/yellobyte/YB-ESP32-S3-RS485/raw/main/doc/YB-ESP32-S3-RS485_board_top.jpg)
+![](https://github.com/yellobyte/YB-ESP32-S3-RS485/raw/main/doc/YB-ESP32-S3-RS485_top.jpg)
 
 The integrated RS-485 transceiver (bus driver) is **galvanically isolated** from the rest of the board, which helps to improve communication stability and reliability in 'noisy' environments. The isolation breaks possible ground loops and reduces noise where there are differences in ground potential between ports. Furthermore, it contributes to the protection of the board as well as any components that may be connected to it.
 
