@@ -3,7 +3,7 @@ The **YB-ESP32-S3-RS485** is a general purpose development board supporting **Mo
 - with **ESP32-S3-WROOM-1-N8R2 module** (8MB Flash/2MB PSRAM) or
 - with **ESP32-S3-WROOM-1-N16R2 module** (16MB Flash/2MB PSRAM)
 
-The 4-layer board provides a **RS-485 transceiver**, **CH334 USB-Hub** chip, **CH343 USB-UART** bridge chip, four **status LEDs** and a **USB-C connector** for software upload, serial output, JTAG debugging and feeding power to the board. The board is available on sales platforms [eBay](https://www.ebay.de/sch/i.html?_nkw=yb-esp32-s3) and [Ricardo.ch](https://www.ricardo.ch/en/s/YB-ESP32-S3).
+The 4-layer board provides a **RS-485 transceiver**, **CH334 USB-Hub** chip, **CH343 USB-UART** bridge chip, four **status LEDs** and a **USB-C connector** for software upload, serial output, JTAG debugging and feeding power to the board. The board will be available on sales platforms [eBay](https://www.ebay.de/sch/i.html?_nkw=yb-esp32-s3) and [Ricardo.ch](https://www.ricardo.ch/en/s/YB-ESP32-S3) by mid Nov 2026.
 
 ![](https://github.com/yellobyte/YB-ESP32-S3-RS485/raw/main/doc/YB-ESP32-S3-RS485_top.jpg)
 
