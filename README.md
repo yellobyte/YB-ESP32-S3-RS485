@@ -52,7 +52,7 @@ If you happen to have a PT100 sensor module at hand pls connect it to the RS-485
  - **pushbuttons**. One is labeled 'R' and resets the ESP32-S3 (shorts EN pin to ground) and the other one is labeled 'B' and shorts GPIO0 to ground when pressed. It allows to manually put the board into boot mode.
  - **lots of available GPIOs** next to the ones already mentioned above.
 
-The board will spare you the trouble of cabling different Arduino/extension boards and saves a lot of room on the breadboard as well.
+The board will spare you the trouble of cabling different Arduino/extension boards, provides galvanic isolation between the RS-485 bus and your ESP32 project and saves space on the breadboard as well.
 
  ![](https://github.com/yellobyte/YB-ESP32-S3-RS485/raw/main/doc/YB-ESP32-S3-RS485_modules_replacement.jpg)
 
