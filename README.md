@@ -9,7 +9,7 @@ The 4-layer board provides a **RS-485 transceiver**, **CH334 USB-Hub** chip, **C
 
 The integrated RS-485 transceiver (bus driver) is **galvanically isolated** from the rest of the board, which helps to improve communication stability and reliability in 'noisy' environments. The isolation breaks possible ground loops and reduces noise, caused e.g. by differences in ground potential between ports, high power devices switched on/off in the near vicinity, ESD events, etc. Furthermore, it contributes to the protection of the board as well as any components that may be connected to it.
 
-**A word of caution:** 'galvanically isolated' does **NOT** mean you can abandon common sense. Do not use this circuit board in environments where there is a risk that the RS-485 bus could be exposed to high voltages for an extended period! The galvanic isolation of the transceiver is primarily intended to improve bus communication; it is not designed to provide protection against continuously hazardous voltage levels.
+**A word of caution:** 'galvanically isolated' does **NOT** mean you can abandon common sense. The galvanic isolation of the transceiver is primarily intended to improve bus communication and provide protection against EMI effects on the RS-485 bus (e.g., voltage spikes, etc); it is not designed to provide protection against continuously hazardous voltage levels!
 
 The built-in **RS-485 bus termination** (120Ω) if needed can be disabled by opening the 2 labeled solder bridges 'BUS-TERM' on the bottom of the board.
 
