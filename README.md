@@ -34,7 +34,7 @@ If you happen to have a PT100 sensor module at hand pls connect it to the RS-485
 ## YB-ESP32-S3-RS485 board features:
  - **ESP32-S3-WROOM-1-NxR2** module (8 or 16MB Flash, 2MB PSRAM)
  - **WiFi PCB antenna** (on ESP32-S3-WROOM-1 module)
- - **RS-485 transceiver** (ultra small CA-IS2092A chip):
+ - **RS-485 transceiver** (ultra small CA-IS2092A in a LGA16 package):
    - galvanically isolated from board
    - integrated ESD protection
    - integrated DC-DC converter
@@ -72,7 +72,7 @@ Normal operating current of the idle board (-N8R2, all GPIOs/RS-485 bus unconnec
 The board uses the popular WCH chips CH334P (USB-Hub) and CH343P (USB-UART bridge). If you haven't done yet then you need to install the CH343 Driver on your Laptop/PC. For Windows go [here](https://www.wch-ic.com/search?t=all&q=ch343) and download and install the newest version of the driver. Linux provides CH34x drivers by default.
 
 ### Arduino IDE:
-As of Arduino ESP32 Core V4.0.0 you open the board list, enter "yb" and then select "**Yellobyte YB-ESP32-S3-RS485**". Now choose the proper settings for COM port, debug level, flash size, PSRAM, etc. as shown below. Be aware, since the ESP32-S3 MCU is very versatile there are a lot of build options to play with. Espressif's homepage offers some help.
+As of Arduino ESP32 Core V3.3.13 you open the board list, enter "yb" and then select "**Yellobyte YB-ESP32-S3-RS485**". Now choose the proper settings for COM port, debug level, flash size, PSRAM, etc. as shown below. Be aware, since the ESP32-S3 MCU is very versatile there are a lot of build options to play with. Espressif's homepage offers some help.
 
 Settings that apply to the standard board with **-N8R2** module (8MB Flash/2MB PSRAM):
 - Board: *Yellobyte YB-ESP32-S3-RS485*
@@ -89,7 +89,7 @@ For **-N16R2** module (16MB Flash/2MB PSRAM) the following settings apply:
 - PSRAM: *QSPI PSRAM*.
 
 ### PlatformIO:
-Building with **PlatformIO** is easy as well. Starting with Arduino ESP32 Core v4.0.0 the VSCode/PlatformIO IDE provides the necessary board definition file. Such *.json files provide the correct board definitions & settings.
+Building with **PlatformIO** is easy as well. Starting with Arduino ESP32 Core v3.3.13 the VSCode/PlatformIO IDE provides the necessary board definition file. Such *.json files provide the correct board definitions & settings.
 
 Just create a new project and give it a name, then go to board selection, enter "yb-" and choose the YB-ESP32-S3-RS485 board from the list.
 
